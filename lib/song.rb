@@ -38,6 +38,8 @@ class Song
     self.find_by_name(name) || self.create_by_name(name)
   end
   
+  #Runs one or the other. Cannot not run both.
+  
 
   def self.alphabetical
     @@all.sort_by { |song| song.name }
@@ -60,6 +62,7 @@ class Song
   # def self.destroy_all
   #   @@all =[]
   # end
+  #Also works
   
   def self.destroy_all
       @@all.clear
